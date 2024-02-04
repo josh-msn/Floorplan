@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Floorplan</title>
+  </head>
+
+  <body>
+    <!-- Write your HTML here -->
+    <div class="roof">
+      <div class="roofLeft">
+        <p>Dachdämmung</p>
+      </div>
+
+      <div class="roofRight"></div>
+    </div>
+    <div class="houses">
+      <div class="houseLeft">
+        <p>H<br />A<br />U<br />S</p>
+      </div>
+      <div class="insulation">
+        <div class="houseMiddle">
+          <div class="item livingRoom">
+            <div class="roomWrapper">
+              <p class="roomName">Wohnzimmer</p>
+              <p id="livingRoomTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+          <div class="item bedroom">
+            <div class="roomWrapper">
+              <p class="roomName">Schlafzimmer</p>
+              <p id="beedRoomTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+          <div class="item kitchen">
+            <div class="roomWrapper">
+              <p class="roomName">Küche</p>
+              <p id="kitchenTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+          <div class="item hall">
+            <div class="roomWrapper">
+              <p class="roomName">Flur</p>
+              <p id="floorTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+          <div class="item childrensRoom">
+            <div class="roomWrapper">
+              <p class="roomName">Kinderzimmer</p>
+              <p id="childrensRoomTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+          <div class="item bathroom">
+            <div class="roomWrapper">
+              <p class="roomName">Bad</p>
+              <p id="bathroomTmp" class="temperature">21°C</p>
+            </div>
+            <div class="btnWrapper">
+              <input type="button" class="roomTempBtn" value="-" />
+              <input type="button" class="roomTempBtn" value="+" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="houseRight">
+        <p>H<br />A<br />U<br />S</p>
+      </div>
+    </div>
+    <div class="basement">
+      <p>Kellerdeckendämmung</p>
+    </div>
+
+    <div class="controlGrid">
+      <div class="resultLabels">
+        <p class="resultLabel" id="r1">Verbrauch ohne Maßnahmen:</p>
+        <p class="resultLabel" id="r2">Verbrauch mit Maßnahmen:</p>
+        <p class="resultLabel" id="r3">Kosten ohne Maßnahmen:</p>
+        <p class="resultLabel" id="r4">Kosten mit Maßnahmen:</p>
+        <p class="resultLabel" id="r5">Ersparnis in %:</p>
+        <p class="resultLabel" id="r6">Ersparnis in €:</p>
+      </div>
+      <div class="results">
+        <p class="result" id="r1.1">0</p>
+        <p class="result" id="r2.1">0</p>
+        <p class="result" id="r3.1">0</p>
+        <p class="result" id="r4.1">0</p>
+        <p class="result" id="r5.1">0</p>
+        <p class="result" id="r6.1">0</p>
+      </div>
+      <div class="scenes">
+        <div class="example">
+          <p>Aufenthaltsräume beheizt ohne Dämmung</p>
+          <button type="button" id="example1">aktivieren</button>
+        </div>
+        <div class="example">
+          <p>Aufenthaltsräume beheizt mit Dämmung</p>
+          <button type="button" id="example2">aktivieren</button>
+        </div>
+        <div class="example">
+          <p>Alle Räume beheizt ohne Dämmung</p>
+          <button type="button" id="example3">aktivieren</button>
+        </div>
+        <div class="example">
+          <p>Alle Räume beheizt mit Dämmung</p>
+          <button type="button" id="example4">aktivieren</button>
+        </div>
+      </div>
+      <div class="basicControl">
+        <div class="atmoTmp">
+          <p>Außentemperatur</p>
+          <label for="atmoTmp">21°C</label>
+          <input type="range" id="atmoTmp" name="atmoTmp" min="-10" max="21" />
+        </div>
+        <button type="button" id="btnTmpReset">Zurücksetzen</button>
+      </div>
+    </div>
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
